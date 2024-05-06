@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body{
+    background: #FEFDED;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background: url("/galaxy.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: all 0.3s;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.card{
+    height:50vh;
+    box-shadow: 3px 3px 3px 5px hsl(0, 0%, 0%,0.1);
+    background: #FEFDED;
+    border-radius: 25px;
+}
+
+
+.girl{
+    height: 305px;
+    width:300px;
+    display: inline-block;
+}
+
+form{
+    height: 35vh;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    padding: 30px;
+}
+
+.signup{
+    color: blue;
+    text-decoration: none;
+}
+
+form p{
+    margin-top: 10px;
+}
+
+form h1{
+    margin-bottom: 10px;
+    font-size: 3rem;
+    background: url("/galaxy.jpg");
+    background-size: cover;
+    background-position: center ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+input{
+    outline: none;
+}
+
+label{
+    align-self: flex-start;
+    margin-left: 40px;
+}
+
+.welcome{
+    background: aliceblue;
+    padding: 0 10px;
+    border-radius: 25px;
+}
+
+.welcome h1{
+    font-size: 3rem;
+    background:url("/galaxy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip:text ;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.boy{
+    float: right;
+    height: 304px;
+    width:300px;
+}
+
+.signup-form{
+    float: left;
+    padding: 30px 60px;
+}
+
+.signup-form label{
+    margin-left: 0;
+}
+
+.signup-form h1{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.submit{
+    padding: 7px 15px;
+    margin-top: 10px;
+    color: white;
+    background: url("/galaxy.jpg");
+    background-size: cover;
+    background-position: center;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition:0.3s;
+}
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FF204E;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    height: 25px;
+    padding: 15px 0px;
+    overflow: hidden;
+    z-index: 2;
+  
+}
+
+.logo{
+    width: 25px;
+    border: 5px solid transparent;
+    margin-left: 50px;
+}
+
+.logo-title{
+    font-size: 2rem;
+    background: url("/white.jpg");
+    background-position: center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ul li{
+    display: inline-block;
+    text-align: right;
+    padding: 10px;
+}
+
+.nav-icons{
+    width: 25px;
+    filter: invert(0);
+    transition: all ease 0.3s;
+}
+
+.nav-icons:hover{
+    scale: 1.2;
+    filter: invert(1);
+    transition: all ease 0.3s;
+}
+
+.nav-bar div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #FF204E;
+    width: 45px;
+    position: fixed;
+    top: 3%;
+    left: 0px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.side-bar-icons{
+    width: 20px;
+    filter: invert(0);
+    transition: all ease 0.3s;
+}
+
+.side-bar-icons:hover{
+    filter: invert(1);
+    transition: all ease 0.3s;
+    scale: 1.2;
+}
+
+.mid-sec{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-sec{
+    width: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+}
+
+
+.app-logo{
+    width: 250px;
+}
+
+.app-slogan{
+    color: white;
+    margin: 10px;
+}
+
+.icons-list{
+    list-style: none;
+    padding: 35px 0px;
+    text-align: center;
+}
+
+.icons-list li{
+    display: inline-block;
+
+}
+
+.profile-img{
+    width: 30px;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    background: #A0153E;
+    position: fixed;
+    left: 45px;
+    top:9%;
+}
+
+.contact{
+    height: 50px;
+    width: 298px;
+    border: 1px solid #7469B6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact-img{
+    width: 50px;
+    border-radius: 25px;
+    margin-left: 10px;
+}
+
+.contact-name{
+    background: url("/galaxy.jpg");
+    font-size: 1.5rem;
+    margin-top: 0;
+    background-position: center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 10px;
+}
+
+.message{
+    color: black;
+    margin-left: 10px;
+}
+
+.time{
+    font-size: 0.6rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.contact-link{
+    text-decoration: none;
+    color: black;
+}
+
+.contact-link:active{
+    color: black;
+}
+
+.contact-bar{
+    display: flex;
+    position: fixed;
+    top: 9%;
+    left: 345px;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    background:#FF204E;
+    padding: 15px;
+    z-index: 2;
+}
+
+.sender-name{
+    font-size: 1.5rem;
+    background:url("/galaxy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip:text ;
+    -webkit-text-fill-color: transparent;
+}
+
+.sender-container{
+    background: #FF204E;
+    padding: 0px 15px;
+    margin-left: 25px;
+}
+
+.chat{
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ margin-bottom: 0px;
+}
+
+.chat-message{
+    margin-left: 10px;
+    font-size: 1rem;
+    background: #5D0E41;
+    color: white;
+    width: fit-content;
+    padding:5px 10px 30px 10px;
+    clip-path: polygon(0% 0%, 100% 0, 100% 86%, 88% 76%, 35% 76%, 0% 75%);
+    border-radius: 5px;
+    margin-bottom: -10px;
+}
+
+.sender-chat{
+    background: #FF204E;
+    color: black;
+    
+}
+
+.chat-message em{
+    text-align: right;
+}
+
+.chat-container{
+    z-index: -1;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.sender-chat-container{
+    margin-left: 50%;
+    margin-bottom: 5px;
+}
+
+.time-now{
+    font-size: 1.5rem;
+    background: url("/galaxy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+.chat-area{
+    position: fixed;
+    bottom: 0%;
+    left: 32%;
+    width: 60%;
+}
+
+.send-form{
+    height: 15px;
+    width: 100%;
+    padding: 15px;
+    display: inline-block;
+}
+
+.send-form input{
+    width: 80%;
+}
+
+.sender{
+    visibility: hidden;
+}
+
+
+.send{
+    width:15px;
+}
+
+.chat-time{
+    font-size: small;
+    margin-left: 10px;
+}

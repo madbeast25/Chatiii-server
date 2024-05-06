@@ -1,0 +1,23 @@
+{
+  "name": "chat-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Sender.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "pg": "^8.11.5",
+    "react": "^18.3.1",
+    "react-live-clock": "^6.1.20"
+  }
+}

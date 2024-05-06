@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <div class="welcome"><h1>Welcome to Chatiii</h1></div>
+    <div class="card">
+         <img src="/girl.jpg" alt="girl with phone" class="girl">
+         <form action="/" method="post">
+            <h1>Login</h1>
+            <label for="user">UserName</label>
+            <input type="text" name="user" <% if(locals.name){ %> value="<%= name %>" <% } %> required>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" required autofocus autocomplete="false">
+            <button class="submit">Logon</button>
+            <% if(locals.error){ %>
+                <% if(error=="yes") {%>
+                    <p class="wrong">Invalid password Try again</p>
+                    <% } %>
+                    <% }else if(locals.nouser){ %>
+                        <% if(nouser=="yes"){ %>
+                            <p class="wrong">Username doesn't exist!!!</p>
+                            <% } %>
+                            <% } %>
+            <p>if you don't have an account <a href="/signup" class="signup">Signup</a></p>
+        </form>
+    </div>
+
+</div>

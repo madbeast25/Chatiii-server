@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+<div class="container">
+    <div class="welcome"><h1>Thanks for joining  </h1></div>
+    <div class="card">
+         <form action="/signup" method="post" class="signup-form">
+            <h1>Signup</h1>
+            <label for="user">UserName</label>
+            <input type="text" name="user" required>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" required autofocus autocomplete="false">
+            <label for="retype">Retype password</label>
+            <input type="password" name="retype" required autofocus autocomplete="false">
+            <button class="submit" type="submit">Signup</button>
+            <% if(locals.exist){ %>
+                <% if(exist=="yes"){ %>
+                <p class="wrong">Username already exist!!!</p>
+                <% } %>
+                <% } %>
+                <% if(locals.nomatch){ %>
+                    <% if(nomatch=="yes"){ %>
+                    <p class="wrong">Password doesn't match!!!</p>
+                    <% } %>
+                    <% } %>
+        </form>
+
+        <img src="/cat.jpg" alt="girl with phone" class="boy">
+    </div>

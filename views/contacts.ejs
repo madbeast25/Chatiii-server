@@ -1,0 +1,58 @@
+<%- include("partials/chat-header.ejs") %>
+
+<div class="nav-bar">
+    <div> <img class="logo" src="/chat-bubbles.png">
+        <h2 class="logo-title">Chatiii</h2>
+    </div>
+   
+    <ul>
+        <h3 class="time-now"><% if(locals.Time){ %><%= Time %><% } %></h3>
+        <li><a href="#"><img src="/camera (1).png" class="nav-icons"></a></li>
+        <li><a href="#"><img src="/search.png" class="nav-icons"></a></li>
+        <li><a href="#"><img src="/dots.png" class="nav-icons"></a></li>
+    </ul>
+
+</div>
+<div class="side-bar">
+    <div>
+        <ul class="icons-list">
+            <li><a><img src="/messenger.png" class="side-bar-icons"></a></li>
+            <li><a><img src="/status.png" class="side-bar-icons"></a></li>
+        </ul>
+    </div>
+    <div>
+        <ul class="icons-list">
+            <li><a><img src="/star.png" class="side-bar-icons"></a></li>
+            <li><a><img src="/search.png" class="side-bar-icons"></a></li>
+            <li><a><img src="/boy.jpg" class="profile-img"></a></li>
+        </ul>
+        
+    </div>
+   
+        <div class="contacts" >
+            <% if(locals.users){ %>
+                <% users.forEach((user)=> {%>
+            <a href="/chat/<%= user.username %>" class="contact-link">
+            <div class="contact">
+                <img src="/girl.jpg" class="contact-img">
+                <div>
+                 <h2 class="contact-name"><%= user.username %></h2>
+                 <% if(locals.chated) {%>
+                 <p class="message"><%= chated.chat %></p>
+                </div>
+                <p class="time"><%= chated.time %></p>
+                <%  } %>
+            </div>
+        </a>
+        <% }) %>
+        <% } %>
+         </div>
+   
+
+</div>
+<div class="mid-sec">
+    <div class="app-sec">
+      <img src="/chat.png" class="app-logo">
+      <h3 class="app-slogan">I L❤️ve the chatiii in  y❤️u</h3>
+    </div>
+</div>

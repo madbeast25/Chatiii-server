@@ -1,0 +1,116 @@
+<%- include("partials/chat-header.ejs") %>
+
+<div class="nav-bar">
+    <div> <img class="logo" src="/chat-bubbles.png">
+        <h2 class="logo-title">Chatiii</h2>
+    </div>
+   
+    <ul>
+        <h3 class="time-now"><% if(locals.time_now){ %><%= time_now %><% } %></h3>
+        <li><a href="#"><img src="/camera (1).png" class="nav-icons"></a></li>
+        <li><a href="#"><img src="/search.png" class="nav-icons"></a></li>
+        <li><a href="#"><img src="/dots.png" class="nav-icons"></a></li>
+    </ul>
+
+</div>
+<div class="side-bar">
+    <div>
+        <ul class="icons-list">
+            <li><a><img src="/messenger.png" class="side-bar-icons"></a></li>
+            <li><a><img src="/status.png" class="side-bar-icons"></a></li>
+        </ul>
+    </div>
+    <div>
+        <ul class="icons-list">
+            <li><a><img src="/star.png" class="side-bar-icons"></a></li>
+            <li><a><img src="/search.png" class="side-bar-icons"></a></li>
+            <li><a><img src="/boy.jpg" class="profile-img"></a></li>
+        </ul>
+        
+    </div>
+
+        
+</div>
+
+<div class="contacts" >
+    <% if(locals.users){ %>
+        <% users.forEach((user)=> {%>
+    <a href="/chat/<%= user.username %>" class="contact-link">
+    <div class="contact">
+        <img src="/girl.jpg" class="contact-img">
+        <div>
+         <h2 class="contact-name"><%= user.username %></h2>
+         
+        <% if(Object.keys(user).length !== 0 && user.username==chated[0].username){ %>
+                <% if(locals.recentchat){ %>
+                <p class="message"><%= recentchat %></p>
+                <% } %>
+                <% } %>
+        </div>
+        <% if( locals.Time){ %>
+        <p class="time"><%= Time %></p>
+        <% } %>
+    </div>
+</a>
+<% }); %>
+<% } %>
+ </div>
+
+ <% if(locals.chated){ %>
+ <div class="contact-bar">
+    <img class="contact-img" src="/boy.jpg">
+    <div>
+        <div class="sender-container"><h2 class="sender-name"><% if(Object.keys(chated).length !== 0) { %><%= chated[0].username %><% } %></h2></div>
+        <p class="status"></p>
+    </div>
+
+ </div>
+
+ <% } %>
+
+<div class="chat-container">
+    <% if(Object.keys(chated).length !== 0){ %>
+    <% chated.forEach((chat)=>{ %>
+        <div class="chat">
+            <% if(locals.sended){ %>
+            <% if(locals.currentuser){ %>
+                <% if(chat.username==sended && chat.reciever==currentuser){ %>
+           <p class="chat-message"><%= chat.chat %><% if(chat.chat.length>=50){ %><br><% }%><em class="chat-time"><%= chat.time %></em></p>
+
+           <% } %>
+           <% } %>
+           <% } %>
+        </div>
+        <div class="sender-chat-container">
+            <div class="chat">
+                <% if(locals.currentuser){ %>
+                    <% if(locals.received){ %>
+                    <% if(chat.username==currentuser && chat.reciever==received) {%>
+                 <p class="chat-message sender-chat" ><%= chat.chat %><% if(chat.chat.length>=50){ %><br><% }%><em class="chat-time"><%= chat.time %></em></p>
+                 <% } %>
+                 <% } %>
+                 <% } %>
+            </div>
+    </div>
+        <% }); %>
+        <% }else{ %>
+            <div class="mid-sec">
+                <div class="app-sec">
+                  <img src="/chat.png" class="app-logo">
+                  <h3 class="app-slogan">I L❤️ve the chatiii in  y❤️u</h3>
+                </div>
+            </div>
+            <% } %>
+</div>
+
+
+
+
+<div class="chat-area">
+    <form action="/send" method="post" class="send-form">
+        <input type="text" name="message" autofocus autocomplete="false">
+        <button type="submit" class="send-btn"><img src="/send.png" class="send"></button>
+    </form>
+</div>
+    
+    
